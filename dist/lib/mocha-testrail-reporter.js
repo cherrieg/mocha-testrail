@@ -83,13 +83,13 @@ var MochaTestRailReporter = (function (_super) {
                 console.warn("No testcases were matched. Ensure that your tests are declared correctly and matches TCxxx");
             }
             var executionDateTime = new Date().toISOString();
-            console.log("passes: " + _this.passes + "===")
-            console.log("fails: " + _this.fails+ "===")
-            console.log("pending: " + _this.pending+ "===")
+           // console.log("passes: " + _this.passes + "===")
+           // console.log("fails: " + _this.fails+ "===")
+           // console.log("pending: " + _this.pending+ "===")
             var total = _this.passes + _this.fails + _this.pending;
             var name = "Medicare API (master) " + executionDateTime;
             var description = "Medicare API (master) " + executionDateTime + "\nExecution summary:\nPasses: " + _this.passes + "\nFails: " + _this.fails + "\nPending: " + _this.pending + "\nTotal: " + total + "\n\nExecution details:\n" + _this.out.join('\n') + "                     \n";
-            console.log("===results: " + JSON.stringify(_this.results)+ "===")
+           // console.log("===results: " + JSON.stringify(_this.results)+ "===")
             // new testrail_1.TestRail(reporterOptions).publish(name, description, _this.results);
             new testrail_1.TestRail(reporterOptions).publish(_this.results);
         });
