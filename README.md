@@ -50,6 +50,8 @@ Only passed or failed tests will be published. Skipped or pending tests will not
 
 **suiteId**: *number* suite number with which the tests are associated
 
+**runId**: *number* run number with which the tests are associated
+
 **assignedToId**: *number* (optional) user id which will be assigned failed tests
 
 ## References
