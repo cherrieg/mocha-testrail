@@ -11,6 +11,7 @@ var TestRail = (function () {
     }
     TestRail.prototype._post = function (api, body, callback, error) {
         var req = request("POST", this.base)
+            .strictSSL(false)
             .query("/api/v2/" + api)
             .headers({
             "content-type": "application/json"
@@ -33,6 +34,7 @@ var TestRail = (function () {
     };
     TestRail.prototype._get = function (api, callback, error) {
         var req = request("GET", this.base)
+            .strictSSL(false)
             .query("/api/v2/" + api)
             .headers({
             "content-type": "application/json"
